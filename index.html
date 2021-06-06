@@ -1,0 +1,89 @@
+﻿<html>
+<head>
+<title> Computer Architecture </title>
+</head>
+<body dir="ltr" background="4.jpg">
+<table width="100%">
+<tr>
+<td>  Main  </td>
+<td> <a href="Computer Hardware.html"> Computer Hardware </a> </td>
+<td> <a href="CPU design.html"> CPU design </a> </td>
+<td> <a href="Software Architecture.html"> Software Architecture </a> </td>
+<td> <a href="Dataflow Architecture.html"> Dataflow Architecture </a> </td>
+</tr>
+</table>
+<br>
+<center>  <font color="blue" size="8"> Computer Architecture </font> </center>
+<font size="5"> In computer engineering, computer architecture is a set of rules and methods that describe the functionality, organization, and implementation of computer systems.
+Some definitions of architecture define it as describing the capabilities and programming model of a computer but not a particular implementation. In other definitions computer architecture involves instruction set architecture design, microarchitecture design, logic design, and implementation.
+
+<br>
+<strong> <font color="Red"> History </font> </strong>
+<br>
+
+The first documented computer architecture was in the correspondence between Charles Babbage and Ada Lovelace, describing the analytical engine. When building the computer Z1 in 1936, Konrad Zuse described in two patent applications for his future projects that machine instructions could be stored in the same storage used for data, i.e., the stored-program concept. Two other early and important examples are:
+
+John von Neumann's 1945 paper, First Draft of a Report on the EDVAC, which described an organization of logical elements; and
+Alan Turing's more detailed Proposed Electronic Calculator for the Automatic Computing Engine, also 1945 and which cited John von Neumann's paper.
+The term “architecture” in computer literature can be traced to the work of Lyle R. Johnson and Frederick P. Brooks, Jr., members of the Machine Organization department in IBM's main research center in 1959. Johnson had the opportunity to write a proprietary research communication about the Stretch, an IBM-developed supercomputer for Los Alamos National Laboratory (at the time known as Los Alamos Scientific Laboratory). To describe the level of detail for discussing the luxuriously embellished computer, he noted that his description of formats, instruction types, hardware parameters, and speed enhancements were at the level of “system architecture”, a term that seemed more useful than “machine organization”.
+
+Subsequently, Brooks, a Stretch designer, opened Chapter 2 of a book called Planning a Computer System: Project Stretch by stating, “Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints.”
+
+Brooks went on to help develop the IBM System/360 (now called the IBM zSeries) line of computers, in which “architecture” became a noun defining “what the user needs to know”. Later, computer users came to use the term in many less explicit ways.
+
+The earliest computer architectures were designed on paper and then directly built into the final hardware form. Later, computer architecture prototypes were physically built in the form of a transistor–transistor logic (TTL) computer—such as the prototypes of the 6800 and the PA-RISC—tested, and tweaked, before committing to the final hardware form. As of the 1990s, new computer architectures are typically "built", tested, and tweaked—inside some other computer architecture in a computer architecture simulator; or inside a FPGA as a soft microprocessor; or both—before committing to the final hardware form.
+
+<br>
+<strong> <font color="Red"> Computer Organization </font> </strong>
+<br>
+Computer organization helps optimize performance-based products. For example, software engineers need to know the processing power of processors. They may need to optimize software in order to gain the most performance for the lowest price. This can require quite a detailed analysis of the computer's organization. For example, in an SD card, the designers might need to arrange the card so that the most data can be processed in the fastest possible way.
+
+Computer organization also helps plan the selection of a processor for a particular project. Multimedia projects may need very rapid data access, while virtual machines may need fast interrupts. Sometimes certain tasks need additional components as well. For example, a computer capable of running a virtual machine needs virtual memory hardware so that the memory of different virtual computers can be kept separated. Computer organization and features also affect power consumption and processor cost.
+<br>
+<strong> <font color="Red"> Types of computer Architecture: </font> </strong>
+<br>
+<font color="light blue">1.Von-Neumann Architecture:</font>
+<br>
+This architecture is proposed by john von-neumann. Now a day’s computer we are using are based on von-neumann architecture. It is based on some concepts.
+
+The memory we have a single read/write memory available for read and write instructions and data. When we talk about memory, it is nothing but the single location which is used for reading and writing instructions for the data and instructions are also present in it. Data and instructions are stored in a single read/write memory within the computer system.
+
+Each memory has multiple locations and each location has a unique address. We can address the contents of memory by its location irrespective of what type of data and instructions are present in the memory, because of which we can read or write any data and instructions. Execution always occurs in a sequential manner unless the change is required. For example, suppose we are executing an instruction from line 1 to line 10 but now we required to execute line 50 instead of line 11 then we jump to instruction 50 and execute it.
+<br>
+
+<br>
+There is a bus (address bus/data bus/control bus) used for the instruction and data code execution. Input device takes data or instruction and the Central processing unit (CPU) performs one operation at a time, either fetching data or instruction in/out of the memory. Once the operation is done it is sent to the output device. Control and logic units for processing operations are within the central processing unit.
+<br>
+<font color="light blue">2.Harvard Architecture:</font>
+Harvard architecture is used when data and code is present in different memory blocks. A separate memory block is needed for data and instruction. Data can be accessed by one memory location and instruction can be accessed by a different location. It has data storage entirely contained within the central processing unit (CPU). A single set of clock cycles is required. The pipeline is possible. It is complex to design. CPU can read and write instructions and process data access. Harvard architecture has different access codes and data address spaces that is, the instruction address zero is not the same as data address zero. Instruction address zero identifies 24-byte value and data address zero identifies 8-byte value which is not the part of the 24-byte value.
+
+Modified harvard architecture is like a harvard architecture machine and it has a common address space for the separate data and instruction cache. It has digital signal processors that will execute small or highly audio or video algorithms and it is reproducible. Microcontrollers have a small number of programs and data memory and it speeds up the processing by executing parallel instructions and data access.
+
+We can observe in the below image, there are separate data and instruction memory that is a bus available to perform operations. It is contained entirely within the Central processing unit. It can perform Input/output operation simultaneously and it has a separate arithmetic and logic unit.
+
+<br>
+<font color="light blue">3. Instruction Set Architecture:</font>
+<br>
+To make up the architecture, instruction set architecture is needed because it has a set of instructions that the processor understands. It has two instruction set one is RISC (reduced instruction set computer) and the second is CISC (complex instruction set computer).
+
+Reduced instruction set computer architecture was realized in the 90’s by IBM. Instruction has multiple address modes, but programs do not use all of them that is the reason multiple address modes were reduced. This helps the compiler to easily write the instructions, performed is increased.
+
+Complex instruction set architecture is the root of compilers because earlier compilers were not there to write programs, to ease programming instructions are added. The best performance is obtained by using simple instruction from ISA.
+<br>
+<font color="light blue">4. Microarchitecture:</font>
+<br>
+
+Microarchitecture is known as computer organizations and it is the way when instruction set architecture is a built-in processor. Instruction set architecture is implemented with various microarchitecture and it varies because of changing technology.
+
+Microarchitecture performs in a certain way. It reads the instruction and decodes it, will find parallel data to process the instruction and then will process the instruction and output will be generated.
+
+It is used in microprocessors, microcontrollers. Some architectures overlap multiple instructions while executing but this does not happen in microarchitecture. Execution units like arithmetic logic units, floating-point units, load units, etc are needed and it performs the operation of the processor. There are microarchitecture decisions within the system such as size, latency, and connectivity of the memories.
+<br>
+<font color="light blue">5. System Design:</font>
+<br>
+The name defines itself, the design will satisfy user requirements such as architecture, module, interfaces and data for a system and it is connected to product development. It is the process of taking marketing information and creating product design to be manufacture. Modular systems are made by standardizing hardware and software.
+</font>
+<br>
+<center><img src=""> </center>
+</body>
+</html>

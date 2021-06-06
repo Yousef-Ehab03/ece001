@@ -1,0 +1,147 @@
+﻿<html>
+<head>
+<title> Computer Architecture </title>
+</head>
+<body dir="ltr" background="4.jpg">
+<table width="100%">
+<tr>
+<td> <a href="index.html"> Main </a> </td>
+<td> <a href="Computer Hardware.html"> Computer Hardware </a> </td>
+<td> <a href="CPU design.html"> CPU design </a> </td>
+<td> <a href="Software Architecture.html"> Software Architecture </a> </td>
+<td>  Dataflow Architecture  </td>
+</tr>
+</table>
+<br>
+<center>  <font color="blue" size="7"> Dataflow Architecture </font> </center>
+<font size="5">
+<ul>
+In data flow architecture, the whole software system is seen as a series of transformations on consecutive pieces or set of input data, where data and operations are independent of each other. In this approach, the data enters into the system and then flows through the modules one at a time until they are assigned to some final destination (output or a data store).
+
+The connections between the components or modules may be implemented as I/O stream, I/O buffers, piped, or other types of connections. The data can be flown in the graph topology with cycles, in a linear structure without cycles, or in a tree type structure.
+
+The main objective of this approach is to achieve the qualities of reuse and modifiability. It is suitable for applications that involve a well-defined series of independent data transformations or computations on orderly defined input and output such as compilers and business data processing applications. There are three types of execution sequences between modules−
+
+<li>Batch sequential</li>
+<li>Pipe and filter or non-sequential pipeline mode</li>
+<li>Process control</li>
+<br>
+<br>
+<font color="light blue" size="6"> Batch Sequential </font>
+
+Batch sequential is a classical data processing model, in which a data transformation subsystem can initiate its process only after its previous subsystem is completely through −
+
+<li>The flow of data carries a batch of data as a whole from one subsystem to another.</li>
+
+<li>The communications between the modules are conducted through temporary intermediate files which can be removed by successive subsystems.</li>
+
+<li>It is applicable for those applications where data is batched, and each subsystem reads related input files and writes output files.</li>
+
+<li>Typical application of this architecture includes business data processing such as banking and utility billing.</li>
+<br>
+Advantages
+<li>Provides simpler divisions on subsystems.</li>
+
+<li>Each subsystem can be an independent program working on input data and producing output data.</li>
+
+Disadvantages
+<li>Provides high latency and low throughput.</li>
+
+<li>Does not provide concurrency and interactive interface.</li>
+
+<li>External control is required for implementation.</li>
+<br>
+<br>
+<font color="light blue" size="6">Pipe and Filter Architecture</font>
+<br>
+This approach lays emphasis on the incremental transformation of data by successive component. In this approach, the flow of data is driven by data and the whole system is decomposed into components of data source, filters, pipes, and data sinks.
+
+The connections between modules are data stream which is first-in/first-out buffer that can be stream of bytes, characters, or any other type of such kind. The main feature of this architecture is its concurrent and incremented execution.
+
+Filter
+A filter is an independent data stream transformer or stream transducers. It transforms the data of the input data stream, processes it, and writes the transformed data stream over a pipe for the next filter to process. It works in an incremental mode, in which it starts working as soon as data arrives through connected pipe. There are two types of filters − active filter and passive filter.
+
+<strong>Active filter</strong>
+
+Active filter lets connected pipes to pull data in and push out the transformed data. It operates with passive pipe, which provides read/write mechanisms for pulling and pushing. This mode is used in UNIX pipe and filter mechanism.
+
+<strong>Passive filter</strong>
+
+Passive filter lets connected pipes to push data in and pull data out. It operates with active pipe, which pulls data from a filter and pushes data into the next filter. It must provide read/write mechanism.
+<br>
+<center><embed src="passive_filter.jpg" width="600" height="400"></center>
+<strong>Advantages</strong>
+<li>Provides concurrency and high throughput for excessive data processing.</li>
+
+<li>Provides reusability and simplifies system maintenance.</li>
+
+<li>Provides modifiability and low coupling between filters.</li>
+
+<li>Provides simplicity by offering clear divisions between any two filters connected by pipe.</li>
+
+<li>Provides flexibility by supporting both sequential and parallel execution.</li>
+
+<strong>Disadvantages</strong>
+<li>Not suitable for dynamic interactions.</li>
+
+<li>A low common denominator is needed for transmission of data in ASCII formats.</li>
+
+<li>Overhead of data transformation between filters.</li>
+
+<li>Does not provide a way for filters to cooperatively interact to solve a problem.</li>
+
+<li>Difficult to configure this architecture dynamically.</li>
+<br>
+
+Pipe:
+<br>
+
+Pipes are stateless and they carry binary or character stream which exist between two filters. It can move a data stream from one filter to another. Pipes use a little contextual information and retain no state information between instantiations.
+<br> 
+<br>
+
+<font color="light blue" size="6">Process Control Architecture</font>
+<br>
+It is a type of data flow architecture where data is neither batched sequential nor pipelined stream. The flow of data comes from a set of variables, which controls the execution of process. It decomposes the entire system into subsystems or modules and connects them.
+<br>
+<strong>Types of Subsystems:</strong>
+<br>
+
+A process control architecture would have a processing unit for changing the process control variables and a controller unit for calculating the amount of changes.
+
+A controller unit must have the following elements −
+
+<li>Controlled Variable − Controlled Variable provides values for the underlying system and should be measured by sensors. For example, speed in cruise control system.</li>
+
+<li>Input Variable − Measures an input to the process. For example, temperature of return air in temperature control system.</li>
+
+<li>Manipulated Variable − Manipulated Variable value is adjusted or changed by the controller.</li>
+
+<li>Process Definition − It includes mechanisms for manipulating some process variables.</li>
+
+<li>Sensor − Obtains values of process variables pertinent to control and can be used as a feedback reference to recalculate manipulated variables.</li>
+
+<li>Set Point − It is the desired value for a controlled variable.</li>
+
+<li>Control Algorithm − It is used for deciding how to manipulate process variables.</li>
+<br>
+<br>
+<strong>Application Areas:</strong>
+Process control architecture is suitable in the following domains −
+
+<li>Embedded system software design, where the system is manipulated by process control variable data.</li>
+
+<li>Applications, which aim is to maintain specified properties of the outputs of the process at given reference values.</li>
+
+<li>Applicable for car-cruise control and building temperature control systems.</li>
+
+<li>Real-time system software to control automobile anti-lock brakes, nuclear power plants, etc.</li>
+
+
+
+</ul>
+</front>
+<br>
+<center><img src=""> </center>
+</body>
+</html>

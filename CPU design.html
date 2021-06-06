@@ -1,0 +1,75 @@
+﻿<html>
+<head>
+<title> Computer Architecture </title>
+</head>
+<body dir="ltr" background="4.jpg">
+<table width="100%">
+<tr>
+<td> <a href="index.html"> Main </a> </td>
+<td> <a href="Computer Hardware.html"> Computer Hardware </a> </td>
+<td>  CPU design  </td>
+<td> <a href="Software Architecture.html"> Software Architecture </a> </td>
+<td> <a href="Dataflow Architecture.html"> Dataflow Architecture </a> </td>
+</tr>
+</table>
+<br>
+<center>  <font color="blue" size="7"> CPU design </font> </center>
+<font size="5">
+<ul>
+<font color="light blue" size="6"> Abstract </font>
+<br>
+CPU design is an area of engineering that focuses on the design of a computer's central processing unit (CPU). The CPU acts as the “brain” of the machine, controlling the operations carried out by the computer. Its basic task is to execute the instructions contained in the programming code used to write software. Different CPU designs can be more or less efficient than one another. Some designs are better at addressing certain types of problems.
+<br>
+<br>
+<font color="light blue" size="6"> Principal Terms </font>
+<br>
+<li>control unit design: describes the part of the CPU that tells the computer how to perform the instructions sent to it by a program.</li>
+<li>datapath design: describes how data flows through the CPU and at what points instructions will be decoded and executed.</li>
+<li>logic implementation: the way in which a CPU is designed to use the open or closed state of combinations of circuits to represent information.</li>
+<li>microcontroller: a tiny computer in which all the essential parts of a computer are united on a single microchip—input and output channels, memory, and a processor.</li>
+<li>peripherals: devices connected to a computer but not part of the computer itself, such as scanners, external storage devices, and so forth.
+<li>protocol processor: a processor that acts in a secondary capacity to the CPU, relieving it from some of the work of managing communication protocols that are used to encode messages on the network.</li>
+<br>
+<br>
+<font color="light blue" size="6"> CPU Design Goals </font>
+<br>
+The design of a CPU is a complex undertaking. The main goal of CPU design is to produce an architecture that can execute instructions in the fastest, most efficient way possible. Both speed and efficiency are relevant factors. There are times when having an instruction that is fast to execute is adequate, but there are also situations where it would not make sense to have to execute that simple instruction hundreds of times to accomplish a task.
+
+Often the work begins by designers considering what the CPU will be expected to do and where it will be used. A microcontroller inside an airplane performs quite different tasks than one inside a kitchen appliance, for instance. The CPU's intended function tells designers what types of programs the CPU will most often run. This, in turn, helps determine what type of instruction-set architecture to use in the microchip that contains the CPU. Knowing what types of programs will be used most frequently also allows CPU designers to develop the most efficient logic implementation. Once this has been done, the control unit design can be defined. Defining the datapath design is usually the next step, as the CPU's handling of instructions is given physical form.
+
+Often a CPU will be designed with additional supports to handle the processing load, so that the CPU itself does not become overloaded. Protocol processors, for example, may assist with communications protocol translation involving the transmission of data between the computer and its peripherals or over the Internet. Internet communication protocols are quite complex. They involve seven different, nested layers of protocols, and each layer must be negotiated before the next can be addressed. Protocol processors take this workload off the CPU.
+<br>
+<center><embed src="c.jpg" width="400" height="400"></center>
+<br>
+A generic state diagram shows the simple processing loop: fetch instructions from memory, decode instructions to determine the proper execute cycle, execute instructions, and then fetch next instructions from memory and continue the cycle. A state diagram is the initial design upon which data paths and logic controls can be designed.
+<br>
+<br>
+<strong>INSTRUCTION SETS</strong>
+<br>
+CPU design is heavily influenced by the type of instruction sets being used. In general, there are two approaches to instructions. The first is random logic. Sometimes this is referred to as “hardwired instructions.” Random logic uses logic devices, such as decoders and counters, to transport data and to perform calculations. Random logic can make it possible to design faster chips. The logic itself takes up space that might otherwise be used to store instructions, however. Therefore, it is not practical to use random logic with very large sets of instructions.
+
+The second approach to instruction sets is microcode. Microcode is sometimes called “emulation” because it references an operations table and uses sets of microinstructions indexed by the table in to execute each CPU instruction. Microcode can sometimes be slower to run than random logic, but it also has advantages that offset this weakness. Microcode breaks down complex instructions into sets of microinstructions. These microinstructions are used in several complex instructions. A CPU executing microcode would therefore be able to reuse microinstructions. Such reuse saves space on the microchip and allows more complex instructions to be added.
+
+The most influential factor to consider when weighing random logic against microcode is memory speed. Random logic usually produces a speedier CPU when CPU speeds outpace memory speeds. When memory speeds are faster, microcode is faster than random logic.
+<br>
+<br>
+<strong>REDUCED INSTRUCTION SET COMPUTER (RISC)</strong>
+<br>
+Early in the history of CPU design, it was felt that the best way to improve CPU performance was to continuously expand instruction sets to give programmers more options. Eventually, studies began to show that adding more complex instructions did not always improve performance, however. In response, CPU manufacturers produced reduced instruction set computer (RISC) chips. RISC chips could use less complex instructions, even though this meant that a larger number of instructions were required.
+<br>
+<br>
+<strong>MOORE'S LAW</strong>
+<br>
+Moore's law is named after Gordon Moore, a co-founder of the computer manufacturer Intel. In 1975, Moore observed that the computing power of an integrated circuit or microchip doubles, on average, every two years. This pace of improvement has been responsible for the rapid development in technological capability and the relatively short lifespan of consumer electronics, which tend to become obsolete soon after they are purchased.
+<br>
+<br>
+
+
+
+</ul>
+</font>
+
+<br>
+<center><img src=""> </center>
+</body>
+</html>
